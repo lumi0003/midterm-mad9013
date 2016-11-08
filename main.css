@@ -27,6 +27,7 @@ html {
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Droid Sans', 'more font stack stuff', sans-serif;
+    background-color: #CC863D
 }
 
 
@@ -34,102 +35,220 @@ html {
 DEFAULTS - MOBILE FIRST 
 ***************************/
 
-.masthead {
-    background-color: aqua;
-    color: antiquewhite
+header {
+    background-image: url(https://unsplash.it/g/320/480);
+    background-size: cover;
 }
 
 h1 {
     font: bold 4.236rem 'Droid Serif', 'more font stack stuff', serif;
+    color: #FFF3E5;
 }
 
 h2 {
     font: bold 2.618rem 'Droid Serif', 'more font stack stuff', serif;
+    color: #7F5426;
 }
 
-li,
-p,
+p {
+    color: #FFF3E5
+}
+
+img.pic {
+    float: left;
+    padding: 10px;
+}
+
 a {
     font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
 }
 
+
+}
 pre,
 code,
 kbd {
     font: normal 1.0rem 'Droid Sans Mono', 'more font stack stuff',
 }
 
-
 /***************************
     LAYOUT - MOBILE FIRST
 ***************************/
-
-.wrapper {
-    width: 95%;
-    margin: 0 auto;
+@media screen and (max-width:600px) {
+    .wrapper {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    header {
+        width: 100%;
+    }
+    
+    nav {
+        width: 100%;
+        background-color: #FFA84C;
+    }
+    
+    section.colfirst {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    
+    section.second {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    
+    nav>ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-bottom: solid 1px #7F5426;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a,
+    nav a:link,
+    nav a:visited {
+        display: block;
+        font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
+        text-align: center;
+        color: #A55C1E;
+        text-decoration: none;
+        border-bottom: solid 2px #7F5426;
+        ;
+        border-right: solid 4px #7F5426;
+        border-left: solid 4px #7F5426;
+        border-top: solid 1px #7F5426;
+    }
+    
+    nav a:active,
+    nav a:focus,
+    nav a:hover {
+        color: #FFF3E5;
+        border: none
+    }
+    
+    main {
+        width: 100%;
+        background-color: #FFA84C;
+    }
+    
+    .col {
+        float: none;
+        width: 100%;
+    }
+    
+    img.pic {
+        float: left;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        background-color: #7F7973;
+    }
+    
+    p {
+        padding: 14px;
+        clear: left
+    }
+    
+    footer {
+        width: 100%;
+    }
+}
+@media screen and (min-width:601px) {
+    ul.mainnav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        overflow: hidden;
+        background-color: #FFA84C;
+        border-bottom: 10px solid #7F5426;
+        width: 100%
+    }
+    
+    li.link {
+        display: inline-block;
+        text-align: center;
+        padding: 10px 10px;
+        color: #7F5426;
+        border-right: solid 3px;
+        border-left: solid 4px;
+        width: 100
+    }
+    
+    nav a,
+    nav a:link,
+    nav a:visited {
+        display: inline-block;
+        font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
+        text-align: center;
+        color: #7F5426;
+        text-decoration: none;
+        width: 100%
+    }
+    
+    nav a:active,
+    nav a:focus,
+    nav a:hover {
+        color: #FFF3E5;
+    }
+    
+    section.colfirst {
+        float: left;
+        width: 50%;
+        padding: 20px;
+        height: 60%
+    }
+    
+    section.second {
+        float: right;
+        width: 50%;
+        padding: 20px;
+        height: 70%;
+    }
+    
+    wrapper {
+        width: 100%
+    }
+    
+    header {
+        width: 100%
+    }
+    
+    nav {
+        width: 1000%
+    }
 }
 
-header {
-    width: 100%;
 }
 
-nav {
-    width: 100%;
 }
-
-nav>ul {
-    width: 100%;
-}
-
-nav li {
-    width: 100%;
-    list-style: none;
-}
-
-nav a,
-nav a:link,
-nav a:visited {
-    display: block;
-    font: bold 1.618rem 'Droid Sans', 'more font stack stuff', sans-serif;
-    text-align: center;
-}
-
-nav a:active,
-nav a:focus,
-nav a:hover {}
-
-main {
-    width: 100%;
-}
-
-.col {
-    float: none;
-    width: 100%;
-}
-
-.col img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    background-color: azure;
-}
-
 footer {
-    width: 100%;
+    width: 70%;
+    height: 40%;
+    box-sizing: 30%;
+    font-size: 30px;
 }
-
-@media screen and (min-width:600px) {
-    wrapper: 100%;
-    header: 100%;
-    nav: 90%;
-    links: 20% of nav;
-    main: 90%;
-    columns: 50% of main;
-    column image: 60% of column;
-    footer - 90%;
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 1200px) {
+    ul.mainnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li.link {
+        display: inline-block;
+        text-align: center;
+        padding: 8px 10px;
+    }
     header: 100%;
     nav: 90%;
     links: 20% of nav;
@@ -137,14 +256,119 @@ footer {
     columns: 50% of main;
     column image: 50% of column;
     footer: 100%;
+    nav li {
+        width: 100%;
+    }
 }
-
+@media screen and (min-width: 900px) {
+    ul.mainnav {
+        width: 95%;
+        border-bottom: solid 6px #7F5426;
+        background: #FFA84C;
+        border: groove 0px #6D6D6D;
+        position:relative;
+    }
+    li.link {
+        display: inline-block;
+        text-align: center;
+        padding: 10px 10px;
+        color: #7F5426;
+        border-right: none;
+        border-left: none;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        display: inline-block;
+        font: bold 1.618rem 'Droid Sans',
+        'more font stack stuff',
+        sans-serif;
+        text-align: center;
+        color: #7F5426;
+        text-decoration: none;
+        width: 100%
+    }
+    nav a:active,
+    nav a:focus,
+    nav a:hover {
+        color: #FFF3E5;
+    }
+    section.colfirst {
+        float: left;
+        width: 50%;
+        padding: 20px;
+        height: 60%
+    }
+    section.second {
+        float: right;
+        width: 50%;
+        padding: 20px;
+        height: 70%;
+    }
+    wrapper {
+        width: 100%
+    }
+    header {
+        width: 100%
+    }
+    nav {
+        width: 1000%
+    }
+    footer {
+        width: 70%;
+        height: 40%;
+        box-sizing: 30%;
+        font-size: 30px;
+    }
+}
 @media screen and (min-width: 1200px) {
-    header: 100%;
-    nav: 30%;
-    links: 100% of nav;
-    main: 70%;
-    columns: 50% of main;
-    column image: 55% of column width;
-    footer: 100%;
+    ul.mainnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        overflow: hidden;
+        background-color: #FFA84C;
+        border-bottom: 10px solid #7F5426;
+        display: block;
+    }
+    nav {
+        float: left;
+        width: 20%;
+        height: 70%;
+    }
+    li.link {
+        display:block;
+        text-align: center;
+        padding: 10px 10px;
+        color: #7F5426;
+        border-bottom: solid;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        display:block;
+        font: bold 1.618rem 'Droid Sans',
+        'more font stack stuff',
+        sans-serif;
+        text-align: center;
+        color: #7F5426;
+        text-decoration: none;
+        width: 100%
+    }
+    section.colfirst {
+        float: left;
+        width: 40%;
+        padding: 20px;
+        height: 60%
+    }
+    section.second {
+        float: right;
+        width: 40%;
+        padding: 20px;
+        height: 70%;
+    }
+    footer {
+        clear: left
+    }
 }
